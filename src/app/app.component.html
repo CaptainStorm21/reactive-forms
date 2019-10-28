@@ -1,0 +1,12 @@
+<form [formGroup] = "trollForm" (ngSubmit)="createRant(trollForm.value)">
+  <h3>trollbox</h3>  <br>
+  <p>speak away</p><input label="speak away" formControlName = "rant">
+  <br>
+  <input type = "text" formControlName="troll">
+  <br>
+  <input type = "submit" value="post rant" [disabled]=!trollForm.valid><!--if the form is not filled disable-->
+</form>
+
+
+
+<router-outlet></router-outlet>
